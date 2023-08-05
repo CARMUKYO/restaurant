@@ -5,7 +5,6 @@ import { contactPage } from "./contactPage";
 const container = document.querySelector("#content");
 container.appendChild(createHeader());
 container.appendChild(createMain());
-container.appendChild(createFooter());
 
 homePage();
 
@@ -62,17 +61,7 @@ function createMain() {
   return main;
 }
 
-function createFooter() {
-  const footer = document.createElement("footer");
-  footer.classList.add("footer");
-  footer.id = "footer";
 
-  const footerText = document.createElement("h3");
-  footerText.textContent = "HELLO";
-  footer.appendChild(footerText);
-
-  return footer;
-}
 
 function setActivePage(page) {
   document.querySelector(".active").classList.remove("active");
