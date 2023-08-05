@@ -1,0 +1,177 @@
+:root {
+    --grey: rgb(237, 237, 237);
+    --transparent-grey: rgba(47, 47, 47, 0.9);
+    --transparent-grey-light: rgba(47, 47, 47, 0.7);
+  }
+  
+  html, body {
+    height: 100%;
+    font-size: 13px;
+    font-family: "Niramit", sans-serif;
+    background-image: linear-gradient(
+        rgba(255, 255, 255, 0.5),
+        rgba(255, 255, 255, 0.5)
+      ),
+      url("./img/restaurant.jpg");
+    background-attachment: fixed;
+    background-size: contain;
+  }
+  
+  html {
+    overflow-y: scroll;
+    line-height: 1.2;
+  }
+  
+  #main,
+  #homeFeed,
+  #menuFeed,
+  #contactFeed,
+  #content,
+  #header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #content {
+    text-align: center;
+    justify-content: space-between;
+    height: 100vh;
+  }
+  
+  #header {
+    background-color: var(--transparent-grey);
+    color: white;
+    width: 100%;
+  }
+  
+  #restaurantName {
+    margin: 10px 0;
+    font-size: 4.5rem;
+  }
+  
+  #main {
+    max-width: 400px;
+    margin: 2rem 0;
+  }
+  
+  #pageContainer {
+    width: 50%;
+    display: flex;
+    justify-content: stretch;
+  }
+  
+  #pageContainer {
+    margin: 10px 0px;
+  }
+  
+  #pageContainer > button {
+    flex-grow: 1;
+    padding: 7px 14px;
+    color: white;
+    font-family: "Niramit", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    border: 2px white;
+    background-color: rgba(47, 47, 47, 0);
+  }
+  
+  #pageContainer > button:hover {
+    cursor: pointer;
+    transform-origin: 50% 50%;
+    animation: jump 0.5s linear alternate infinite;
+  }
+  
+  .active {
+    text-decoration: underline;
+    scale: 110%;
+  }
+  
+  img {
+    width: 450px;
+    height: 313px;
+  }
+  
+  #homeFeed {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 70vh;
+    width: 50vw;
+    background-color: var(--transparent-grey-light);
+    color: white;
+    padding: 1%;
+    font-size: 1.4rem;
+  }
+  
+  #homeFeed img {
+    width: 70%;
+    height: auto;
+    object-fit: contain;
+    margin: 10px 0;
+  }
+  
+  #homeFeed > p:last-child {
+    margin-top: 5%;
+  }
+  
+  #menuFeed {
+    background-color: var(--transparent-grey-light);
+    color: white;
+    padding: 3% 6%;
+  }
+  
+  #menuFeed h2 {
+    margin: 1rem;
+    font-size: 2rem;
+  }
+  
+  .menuSection {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    font-size: 1.4rem;
+  }
+  
+  .menuSection img {
+    max-height: 200px;
+    max-width: 400px;
+  }
+  
+  .menuSection img:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: 0.2s ease-in;
+  }
+  
+  #contactFeed {
+    background-color: var(--transparent-grey-light);
+    color: white;
+    padding: 5% 6%;
+    width: 700px;
+    font-size: 1.4rem;
+  }
+  
+  .contactInfoContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+  }
+  
+  #contactFeed img {
+    width: 80%;
+    height: auto;
+    object-fit: contain;
+    margin: 1.3rem 0;
+  }
+
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
